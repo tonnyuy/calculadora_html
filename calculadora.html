@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="titulo">
+	<h1>CALCULADORA MR ROBOT</h1>
+</div>
+	<div class="calculadora">
+		<div class="screen">
+			<input type="text" id="input" disabled>
+		</div>
+		<div class="keys">
+			<button class="numero" onclick="addToScreen('7')">7</button>
+			<button class="numero" onclick="addToScreen('8')">8</button>
+			<button class="numero" onclick="addToScreen('9')">9</button>
+			<button class="operador" onclick="addToScreen('+')">+</button>
+			<button class="numero" onclick="addToScreen('4')">4</button>
+			<button class="numero" onclick="addToScreen('5')">5</button>
+			<button class="numero" onclick="addToScreen('6')">6</button>
+			<button class="operador" onclick="addToScreen('-')">-</button>
+			<button class="numero" onclick="addToScreen('1')">1</button>
+			<button class="numero" onclick="addToScreen('2')">2</button>
+			<button class="numero" onclick="addToScreen('3')">3</button>
+			<button class="operador" onclick="addToScreen('*')">*</button>
+			<button class="clear" onclick="clearScreen()">C</button>
+			<button class="numero" onclick="addToScreen('0')">0</button>
+			<button class="operador" onclick="addToScreen('/')">/</button>
+			<button class="equals" onclick="calculate()">=</button>
+		</div>
+
+
+	</div>
+	<div class="gracias">
+		<h1>GRACIAS POR VISITAR MI SITIO</h1>
+		  <img src="https://th.bing.com/th/id/R.86bfad59564877514257581faa2f2223?rik=px1mWU9ylPb2CA&riu=http%3a%2f%2fwww.beaude.net%2fno-flux%2fwp-content%2fuploads%2f2015%2f07%2fdLYfYLBGDmmQ3DSWcfNk8Q-default_x2.gif&ehk=aO7isVuTfBBl8uoYyZubEWXbyT%2fOyrl0NbwHMJ%2fkkj0%3d&risl=&pid=ImgRaw&r=0" alt="Descripción de la imagen">
+				</div>
+	<script>
+		let input = document.getElementById('input');
+
+function addToScreen(value) {
+	input.value += value;
+}
+
+function clearScreen() {
+	input.value = '';
+}
+
+function calculate() {
+	input.value = eval(input.value);
+}
+	</script>
+</body>
+</html>
